@@ -5,20 +5,30 @@
  */
 package pl.edu.ur.oopl10;
 
+import java.util.Scanner;
+
 /**
  *
  * @author student
  */
-public class zad3 extends java.lang.Exception{
+public class zad3 extends Exception {
 
-    static void zad3() {
-        int dzl, dzk, wynik;
+    Scanner odczyt = new Scanner(System.in);
+
+    public void zad() {
+
         try {
-            dzl = 12;
-            dzk = 0;
-            wynik = dzl / dzk;
-        } catch (ArithmeticException e)  {
+
+            System.out.println("Podaj dzielna");
+            double a = odczyt.nextInt();
+            System.out.println("Podaj dzielnik");
+            double b = odczyt.nextInt();
+            double w = a / b;
+            System.out.println("Wynik: " + w);
+        } catch (ArithmeticException e) {
             System.out.println("Dzielenie przez 0");
         }
+
     }
+
 }
